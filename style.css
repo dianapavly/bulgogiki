@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.main-container {
+    width: 1380px;
+    margin: 0 auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: 800px;
+    /* height: 100vh; */
+    background-image: url(images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 15px;
+    padding-bottom: 200px;
+    font: bold 25px Arial, sans-serif;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.title {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    justify-content: flex-end;
+    padding-right: 100px;
+    padding-top: 100px;
+    font: 34px Arial, sans-serif;
+}
+
+.about {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.5;
+    /* height: 100vh; */
+    background-color: #d9d9d9;
+    overflow: hidden;
+}
+
+.about__block {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about__images img {
+    width: 100%;
+    height: auto;
+    /* или можно задать конкретное значение для высоты, например, height: 300px; */
+}
+
+.about__block p {
+    margin: 20px auto;
+}
+
+.gallery-block {
+    /* width: 100%; */
+    background-color: #A0fcd5;
+    padding: 10px;
+    /* height: 100vh; */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.facts {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.5;
+    /* height: 100vh; */
+    background-color: #c2bdfe;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    padding-top: 40px;
+    font: 40px Arial, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.facts ul {
+    list-style: none;
+    /* Убираем маркеры списка */
+}
+
+.facts li::before {
+    content: "✔";
+    /* Графический контент для галочки */
+    margin-right: 10px;
+    /* Добавляем отступ для разделения галочки и текста */
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+}
+
+.back-to-top-btn:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.back-to-top-btn:active {
+    background-color: #555;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Стили для модального содержимого */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+}
+
+
+/* Стили для кнопки закрытия */
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
